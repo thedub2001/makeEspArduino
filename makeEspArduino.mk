@@ -70,7 +70,7 @@ ifndef ESP_ROOT
   else ifeq ($(OS), Darwin)
     ARDUINO_DIR = $(HOME)/Library/Arduino15/packages/$(CHIP)
   else
-    ARDUINO_DIR = $(HOME)/.arduino15/packages/$(CHIP)
+    ARDUINO_DIR = /usr/share/arduino/
   endif
   ESP_ROOT := $(lastword $(wildcard $(ARDUINO_DIR)/hardware/$(CHIP)/*))
   ifeq ($(ESP_ROOT),)
