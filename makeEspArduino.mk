@@ -72,7 +72,7 @@ ifndef ESP_ROOT
   else
     ARDUINO_DIR = /usr/share/arduino/
   endif
-  ESP_ROOT := $(lastword $(wildcard $(ARDUINO_DIR)/hardware/$(CHIP)/*))
+  ESP_ROOT := /usr/share/arduino/hardware/esp8266com/esp8266
   ifeq ($(ESP_ROOT),)
     $(error No installed version of $(CHIP) Arduino found)
   endif
